@@ -1,0 +1,17 @@
+type = input("(золото/серебро/обычный);")
+price = float(input("Сумма") )
+if type == "золото":
+    if price > 100:
+        print(price * 0.8)
+    else: type == "золото"
+    print(price*0.9)
+elif type == "серебро":
+    if price > 100:
+        print(price * 0.85)
+    else: type == "серебро"
+    print(price * 0.95)
+elif type == "обычный":
+    if price > 100:
+        print(price * 0.95)
+    else: type == "обычный"
+    print(price)
