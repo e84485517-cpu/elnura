@@ -1,0 +1,7 @@
+num = int(input("Введите число: "))
+result = "Простое нечётное число" 
+if num % 4 == 0: result = "Число делится на 4"
+elif num % 2 == 0: result = "Обычное чётное число"
+elif num % 5 == 0: result = "Число делится на 5"
+
+print(result)
