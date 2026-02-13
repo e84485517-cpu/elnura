@@ -1,0 +1,18 @@
+grade = int(input("оценка за тест (от 0-100): ") )
+if grade >=90:
+    homeWork = input ("сдали все дз? (да/нет): ")
+    if homeWork == "да":
+        print("Отлично ! Оценка: А+")
+    else:
+        print("Хорощая работа , но сдайте все дз! Оценка: А")
+elif grade <= 80 and grade <=89 :
+    visit = input ("вы посещали более  75% занятий? (да/нет): ")
+    if visit == "да":
+        print("Хорошо! Оценка: B")
+    else:
+        print("Нужно посещать занятия! Оценка : C ")
+
+elif grade < 60:
+    print("Старайтесь лучше!")
+else:
+    print("Оценка: C")
