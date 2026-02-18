@@ -1,0 +1,3 @@
+data = "MachineLearning"
+substring = data[7:12]  
+print(substring)
