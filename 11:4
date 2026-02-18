@@ -1,0 +1,3 @@
+sentence = "АнализДанных"
+last_6 = sentence[-6:]
+print(last_6)
