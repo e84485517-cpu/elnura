@@ -1,0 +1,6 @@
+numbers = [1, 2, 2, 3, 4, 4, 5]
+remove_numbers = []
+for num in numbers:
+    if num not in remove_numbers:
+        remove_numbers.append(num)
+print(remove_numbers)
