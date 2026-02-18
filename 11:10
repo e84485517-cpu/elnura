@@ -1,0 +1,5 @@
+palindrome = "madam"
+if palindrome == palindrome[::-1]:
+    print("Это палиндром")
+else:
+    print("Это не палиндром")
