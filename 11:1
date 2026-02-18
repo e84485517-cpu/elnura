@@ -1,0 +1,3 @@
+text = "PythonProgramming"
+result = text[:7]
+print(result)
