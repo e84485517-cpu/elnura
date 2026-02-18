@@ -1,3 +1,5 @@
 string = "abcdefg"
  first_char = string[0]
 last_char = string[-3]
+print(first_char)  
+print(last_char)
