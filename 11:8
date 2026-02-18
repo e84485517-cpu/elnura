@@ -1,0 +1,3 @@
+code = "программирование"
+result = code[1::2]  
+print(result)
