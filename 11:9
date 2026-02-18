@@ -1,0 +1,4 @@
+email = "student@university.com"
+domain = email[email.index("@")+1 : email.index(".")]
+
+print(domain)
