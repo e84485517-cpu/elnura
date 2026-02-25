@@ -1,0 +1,12 @@
+students = [
+    {"name": "Alice", "subjects": ("Math", "Physics", "English"), "scores": {"Math": 85, "Physics": 78, "English": 92}},
+    {"name": "Bob", "subjects": ("Math", "Biology", "English"), "scores": {"Math": 72, "Biology": 88, "English": 80}},
+    {"name": "Charlie", "subjects": ("Math", "Physics", "Chemistry"), "scores": {"Math": 90, "Physics": 95, "Chemistry": 85}},
+]
+def unique_subjects(data):
+    all_subjects = set()
+    for student in data:
+        all_subjects.update(student["subjects"])
+    return all_subjects
+
+print(unique_subjects(students))
