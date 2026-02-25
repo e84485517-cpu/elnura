@@ -1,0 +1,26 @@
+library_books = {
+    "B001": {"title": "Основы Python", "borrower": "Алиса", "due_date": -5, "fine_rate": 0.5},
+    "B002": {"title": "Наука о данных", "borrower": "Боб", "due_date": 3, "fine_rate": 0.75},
+    "B003": {"title": "Введение в ИИ", "borrower": None, "due_date": 0, "fine_rate": 0.25},
+    "B004": {"title": "Алгоритмы", "borrower": "Алиса", "due_date": 2, "fine_rate": 1.0}
+}
+
+def process_library(books):
+    fines = {}
+
+    for k, b in books.items():
+        borrower = b["borrower"] or "Нет"
+        overdue = b["borrower"] and b["due_date"] > 0
+        fine = b["due_date"] * b["fine_rate"] if overdue else 0
+        status = "Доступна" if b["borrower"] is None else ("Просрочена" if overdue else "В срок")
+
+        if overdue:
+            fines[b["borrower"]] = fines.get(b["borrower"], 0) + fine
+
+        print(f"{k}: {b['title']}, {borrower}, {status}, Штраф: ${fine:.2f}")
+
+    if fines:
+        top = max(fines, key=fines.get)
+        print(f"\nМаксимальный штраф → {top}: ${fines[top]:.2f}")
+
+process_library(library_books)
