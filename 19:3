@@ -1,0 +1,16 @@
+students = [
+    {"name": "Alice", "subjects": ("Math", "Physics", "English"), "scores": {"Math": 85, "Physics": 78, "English": 92}},
+    {"name": "Bob", "subjects": ("Math", "Biology", "English"), "scores": {"Math": 72, "Biology": 88, "English": 80}},
+    {"name": "Charlie", "subjects": ("Math", "Physics", "Chemistry"), "scores": {"Math": 90, "Physics": 95, "Chemistry": 85}},
+]
+def find_top_student(students):
+    top_name = ""
+    max_avg = -1
+    for student in students:
+        avg = sum(student["scores"].values()) / len(student["scores"])
+        if avg > max_avg:
+            max_avg = avg
+            top_name = student["name"]
+    return top_name
+    
+print(find_top_student(students))
